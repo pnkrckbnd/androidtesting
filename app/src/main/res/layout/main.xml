@@ -1,11 +1,97 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center">
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:gravity="fill_vertical">
 
-    <TextView
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@drawable/ic_launcher"
+		android:layout_weight="1.0"
+		android:textAlignment="textEnd">
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:padding="10dp"
+			android:id="@+id/mainTextView"
+			android:textSize="16sp"
+			android:textIsSelectable="true"
+			android:gravity="start"
+			android:textAlignment="viewStart"/>
+
+	</ScrollView>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_gravity="bottom|fill_horizontal"
+		android:gravity="bottom">
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_width="320dp"
+			android:ems="10"
+			android:gravity="left"
+			android:layout_gravity="bottom|left"
+			android:id="@+id/mainEditText"
+			android:layout_weight="1.0"/>
+
+		<Button
+			style="?android:attr/buttonStyleSmall"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="Submit"
+			android:layout_gravity="bottom|right"
+			android:id="@+id/submitBtn"
+			android:layout_weight=".25"
+			android:layout_marginBottom="2dp"
+			android:onClick="onClick"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_gravity="center_horizontal"
+		android:gravity="bottom|center_horizontal"
+		android:id="@+id/controlsLayout"
+		android:layout_margin="10dp">
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="Font"
+			android:id="@+id/fontBtn"
+			android:layout_weight=".25"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="Size"
+			android:layout_weight=".25"
+			android:id="@+id/sizeBtn"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="Color"
+			android:layout_weight=".25"
+			android:id="@+id/colorBtn"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="UNDO"
+			android:layout_weight=".25"
+			android:id="@+id/undoBtn"/>
+
+	</LinearLayout>
 
 </LinearLayout>
+
